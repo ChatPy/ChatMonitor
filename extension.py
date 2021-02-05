@@ -10,10 +10,12 @@ global recordings
 template = template_file.read()
 recordings = []
 def record(message):
+  global recordings
   recordings.append(message)
 def extension():
+  global recordings
   length = 0
   while True:
     if length != len(recordings):
       new_data = recordings[-1]
-      # UNDER DEVELOPMENT HERE
+      # WAITING FOR CHANGES IN OTHER REPOS
