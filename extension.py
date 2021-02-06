@@ -32,4 +32,5 @@ def extension():
         message += 1
       file = open("index.html","w")
       file.write(template[0] + user + template[1] + str(round((time.time() - start) * 1000 * 60 * 60)) + template[2] + message + template[3])
-threading.Thread(target=loop).start()
+      file.close()
+threading.Thread(target=extension).start()
